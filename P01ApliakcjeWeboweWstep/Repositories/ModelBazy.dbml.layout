@@ -1,0 +1,12 @@
+﻿<?xml version="1.0" encoding="utf-8"?>
+<ordesignerObjectsDiagram dslVersion="1.0.0.0" absoluteBounds="0, 0, 11, 8.5" name="ModelBazy">
+  <DataContextMoniker Name="/ModelBazyDataContext" />
+  <nestedChildShapes>
+    <classShape Id="1f643f5e-4ded-4e96-9ccf-9f3ef769deed" absoluteBounds="4.625, 2.375, 2, 2.3478011067708335">
+      <DataClassMoniker Name="/ModelBazyDataContext/ZawodnikDB" />
+      <nestedChildShapes>
+        <elementListCompartment Id="0b4291dd-6096-4f6f-9249-0c17f73f8ff7" absoluteBounds="4.64, 2.835, 1.9700000000000002, 1.7878011067708335" name="DataPropertiesCompartment" titleTextColor="Black" itemTextColor="Black" />
+      </nestedChildShapes>
+    </classShape>
+  </nestedChildShapes>
+</ordesignerObjectsDiagram>
