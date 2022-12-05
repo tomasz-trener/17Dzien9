@@ -108,10 +108,11 @@ namespace P02AplikacjaZawodnicy.Repositories
             db.SubmitChanges();
         }
 
-        public Zawodnik PodajZawodnika(int id)
+        public Zawodnik PodajZawodnika(int id) 
         {
             ModelBazyDataContext db = new ModelBazyDataContext();
             ZawodnikDB zdb= db.ZawodnikDB.FirstOrDefault(x => x.id_zawodnika == id);
+            return Transformuj(zdb);
         }
          
     }
