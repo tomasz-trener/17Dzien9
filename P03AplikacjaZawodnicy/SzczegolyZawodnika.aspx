@@ -180,24 +180,27 @@
                 <h5 class="title">Edit Profile</h5>
               </div>
               <div class="card-body">
-                <form>
+                <form runat="server">
                   <div class="row">
                     <div class="col-md-2 pr-1">
                       <div class="form-group">
                         <label>ID</label>
-                        <input type="text" class="form-control" disabled=""  value="<%= Zaznaczony.Id_zawodnika %>">
+                        <asp:TextBox ID="txtIdZawodnika" Enabled="false" CssClass="form-control" runat="server"></asp:TextBox>
+                       <%-- <input type="text" id="btnIdZawodnika" class="form-control" disabled=""  value="<%= Zaznaczony.Id_zawodnika %>">--%>
                       </div>
                     </div>
                     <div class="col-md-5 px-1">
                       <div class="form-group">
                         <label>Imie</label>
-                        <input type="text" class="form-control" value="<%= Zaznaczony.Imie %>">
+                         <asp:TextBox ID="txtImie"  CssClass="form-control" runat="server"></asp:TextBox>
+                       <%-- <input type="text" class="form-control" value="<%= Zaznaczony.Imie %>">--%>
                       </div>
                     </div>
                     <div class="col-md-5 pl-1">
                       <div class="form-group">
                         <label >Nazwisko</label>
-                        <input type="text" class="form-control" value="<%= Zaznaczony.Nazwisko %>">
+                            <asp:TextBox ID="txtNazwisko"  CssClass="form-control" runat="server"></asp:TextBox>
+                        <%--<input type="text" class="form-control" value="<%= Zaznaczony.Nazwisko %>">--%>
                       </div>
                     </div>
                   </div>
@@ -205,13 +208,15 @@
                     <div class="col-md-6 pr-1">
                       <div class="form-group">
                         <label>Kraj</label>
-                        <input type="text" class="form-control"   value="<%= Zaznaczony.Kraj %>">
+                            <asp:TextBox ID="txtKraj"  CssClass="form-control" runat="server"></asp:TextBox>
+                       <%-- <input type="text" class="form-control" value="<%= Zaznaczony.Kraj %>">--%>
                       </div>
                     </div>
                     <div class="col-md-6 pl-1">
                       <div class="form-group">
                         <label>Wzrost</label>
-                        <input type="text" class="form-control" value="<%= Zaznaczony.Wzrost %>">
+                            <asp:TextBox ID="txtWzrost"  CssClass="form-control" runat="server"></asp:TextBox>
+                        <%--<input type="text" class="form-control" value="<%= Zaznaczony.Wzrost %>">--%>
                       </div>
                     </div>
                   </div>
@@ -219,13 +224,15 @@
                     <div class="col-md-4 pr-1">
                       <div class="form-group">
                         <label>Waga</label>
-                        <input type="text" class="form-control"  value="<%= Zaznaczony.Waga %>">
+                            <asp:TextBox ID="txtWaga"  CssClass="form-control" runat="server"></asp:TextBox>
+                       <%-- <input type="text" class="form-control"  value="<%= Zaznaczony.Waga %>">--%>
                       </div>
                     </div>
                     <div class="col-md-4 px-1">
                       <div class="form-group">
                         <label>Data ur</label>
-                        <input type="text" class="form-control" placeholder="Country" value="<%= Zaznaczony.DataSformatowana %>">
+                            <asp:TextBox ID="txtDataUr"  CssClass="form-control" runat="server"></asp:TextBox>
+                     <%--   <input type="text" class="form-control" placeholder="Country" value="<%= Zaznaczony.DataSformatowana %>">--%>
                       </div>
                     </div>
                     
@@ -238,6 +245,8 @@
                       </div>
                     </div>
                   </div>
+
+                    <asp:Button ID="btnZapisz" OnClick="btnZapisz_Click" CssClass="btn btn-primary btn-block" runat="server" Text="Zapisz" />
                 </form>
               </div>
             </div>

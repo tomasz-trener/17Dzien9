@@ -22,7 +22,31 @@ namespace P03AplikacjaZawodnicy
 
                 ZawodnicyRepository zr = new ZawodnicyRepository();
                 Zaznaczony = zr.PodajZawodnika(id);
+
+                txtIdZawodnika.Text = Convert.ToString(Zaznaczony.Id_zawodnika);
+                txtImie.Text = Zaznaczony.Imie;
+                txtNazwisko.Text = Zaznaczony.Nazwisko;
+                txtKraj.Text = Zaznaczony.Kraj;
+                txtWaga.Text = Convert.ToString(Zaznaczony.Waga);
+                txtWzrost.Text = Convert.ToString(Zaznaczony.Wzrost);
+                txtDataUr.Text = Zaznaczony.DataSformatowana;
             }
+        }
+
+        protected void btnZapisz_Click(object sender, EventArgs e)
+        {
+            ZawodnicyRepository zr = new ZawodnicyRepository();
+
+            Zawodnik zawodnik = new Zawodnik();
+            zawodnik.Imie = txtImie.Text;
+            zawodnik.Nazwisko = txtNazwisko.Text;
+            zawodnik.Kraj = txtKraj.Text;
+            zawodnik.DataUrodzenia = Convert.ToDateTime(txtDataUr.Text);
+            zawodnik.Waga = Convert.ToInt32(txtWaga.Text);
+            zawodnik.Wzrost = Convert.ToInt32(txtWzrost.Text);
+
+            zr.Edytuj(zawodnik);
+
         }
     }
 }
