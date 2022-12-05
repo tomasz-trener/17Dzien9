@@ -89,11 +89,21 @@
     <Content Include="assets\js\plugins\bootstrap-notify.js" />
     <Content Include="assets\js\plugins\chartjs.min.js" />
     <Content Include="assets\js\plugins\perfect-scrollbar.jquery.min.js" />
+    <Content Include="CustomJs\SzczegolyZawodnika.js" />
     <Content Include="Default.aspx" />
     <Content Include="Images\fin.jpg" />
     <Content Include="Images\ger.jpg" />
     <Content Include="Images\pol.jpg" />
     <Content Include="Images\usa.jpg" />
+    <Content Include="JsLib\images\ui-icons_444444_256x240.png" />
+    <Content Include="JsLib\images\ui-icons_555555_256x240.png" />
+    <Content Include="JsLib\images\ui-icons_777620_256x240.png" />
+    <Content Include="JsLib\images\ui-icons_777777_256x240.png" />
+    <Content Include="JsLib\images\ui-icons_cc0000_256x240.png" />
+    <Content Include="JsLib\images\ui-icons_ffffff_256x240.png" />
+    <Content Include="JsLib\jquery-ui.min.css" />
+    <Content Include="JsLib\jquery-ui.structure.min.css" />
+    <Content Include="JsLib\jquery-ui.theme.min.css" />
     <Content Include="SzczegolyZawodnika.aspx" />
     <Content Include="Web.config" />
   </ItemGroup>

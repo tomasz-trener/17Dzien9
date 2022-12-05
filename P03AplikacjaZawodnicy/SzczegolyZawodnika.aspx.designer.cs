@@ -78,15 +78,6 @@ namespace P03AplikacjaZawodnicy
         protected global::System.Web.UI.WebControls.TextBox txtWaga;
 
         /// <summary>
-        /// txtDataUr control.
-        /// </summary>
-        /// <remarks>
-        /// Auto-generated field.
-        /// To modify move field declaration from designer file to code-behind file.
-        /// </remarks>
-        protected global::System.Web.UI.WebControls.TextBox txtDataUr;
-
-        /// <summary>
         /// btnZapisz control.
         /// </summary>
         /// <remarks>

@@ -1,2 +1,12 @@
 ﻿
 https://github.com/creativetimofficial/now-ui-dashboard
+
+
+https://jquery.com/ -> biblioteka upraszczajaca i dodajaca do javascriptu nowe funkcje (podstawa)
+https://jqueryui.com/ -> biblioteka do dodawani ciekawych funkcji w jaavascript po stronie UI
+
+inne ciekawe rozwiazania ui 
+https://www.telerik.com/kendo-ui
+
+biblioteka css do ladnego ostylowania kontrolek
+https://getbootstrap.com/

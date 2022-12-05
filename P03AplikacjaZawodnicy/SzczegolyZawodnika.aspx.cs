@@ -29,7 +29,7 @@ namespace P03AplikacjaZawodnicy
                 txtKraj.Text = Zaznaczony.Kraj;
                 txtWaga.Text = Convert.ToString(Zaznaczony.Waga);
                 txtWzrost.Text = Convert.ToString(Zaznaczony.Wzrost);
-                txtDataUr.Text = Zaznaczony.DataSformatowana;
+                //txtDataUr.Text = Zaznaczony.DataSformatowana;
                 txtIdTrenera.Text = Convert.ToString(Zaznaczony.Id_trenera);
             }
         }
@@ -42,7 +42,11 @@ namespace P03AplikacjaZawodnicy
             zawodnik.Imie = txtImie.Text;
             zawodnik.Nazwisko = txtNazwisko.Text;
             zawodnik.Kraj = txtKraj.Text;
-            zawodnik.DataUrodzenia = Convert.ToDateTime(txtDataUr.Text);
+
+            string dataS = Request["txtDataUr"];
+            zawodnik.DataUrodzenia = Convert.ToDateTime(dataS);
+
+           /* zawodnik.DataUrodzenia = Convert.ToDateTime(txtDataUr.Text);*/
             zawodnik.Waga = Convert.ToInt32(txtWaga.Text);
             zawodnik.Wzrost = Convert.ToInt32(txtWzrost.Text);
 
