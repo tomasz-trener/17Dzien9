@@ -67,5 +67,13 @@ namespace P03AplikacjaZawodnicy
             Response.Redirect("Default.aspx");
 
         }
+
+        protected void btnUsun_Click(object sender, EventArgs e)
+        {
+            ZawodnicyRepository zr = new ZawodnicyRepository();
+            int id = Convert.ToInt32(txtIdZawodnika.Text);
+            zr.Usun(id);
+            Response.Redirect("Default.aspx");
+        }
     }
 }

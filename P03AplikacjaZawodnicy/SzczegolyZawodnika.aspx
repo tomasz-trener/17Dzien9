@@ -234,7 +234,7 @@
                                             <div class="form-group">
                                                 <label>Data ur</label>
 
-                                                <input name="txtDataUr" type="text" class="form-control" value="<%= Zaznaczony.DataSformatowana %>" id="datepicker">
+                                                <input name="txtDataUr" type="text" class="form-control" value="<%= Zaznaczony?.DataSformatowana %>" id="datepicker">
 
                                                 <%--<asp:TextBox ID="txtDataUr" CssClass="form-control" runat="server"></asp:TextBox>--%>
 
@@ -253,6 +253,9 @@
                                     </div>
 
                                     <asp:Button ID="btnZapisz" OnClick="btnZapisz_Click" CssClass="btn btn-primary btn-block" runat="server" Text="Zapisz" />
+
+                                     <asp:Button ID="btnUsun" OnClick="btnUsun_Click" CssClass="btn btn-primary btn-block" runat="server" Text="Usuń" />
+
                                 </form>
                             </div>
                         </div>
