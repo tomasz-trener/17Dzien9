@@ -46,12 +46,19 @@ namespace P03AplikacjaZawodnicy
             zawodnik.Waga = Convert.ToInt32(txtWaga.Text);
             zawodnik.Wzrost = Convert.ToInt32(txtWzrost.Text);
 
-            zawodnik.Id_zawodnika = Convert.ToInt32(txtIdZawodnika.Text);
-            zawodnik.Id_trenera = Convert.ToInt32(txtIdTrenera.Text);
-          //  zawodnik.Id_trenera = Zaznaczony.Id_trenera;
-          //  zawodnik.Id_zawodnika = Zaznaczony.Id_zawodnika;
             
-            zr.Edytuj(zawodnik);
+            //  zawodnik.Id_trenera = Zaznaczony.Id_trenera;
+            //  zawodnik.Id_zawodnika = Zaznaczony.Id_zawodnika;
+
+            if (string.IsNullOrEmpty(txtIdZawodnika.Text))
+                zr.DodajNowego(zawodnik);
+            else
+            {
+                zawodnik.Id_zawodnika = Convert.ToInt32(txtIdZawodnika.Text);
+                if(!string.IsNullOrEmpty(txtIdTrenera.Text))
+                    zawodnik.Id_trenera = Convert.ToInt32(txtIdTrenera.Text);
+                zr.Edytuj(zawodnik);
+            }
 
             Response.Redirect("Default.aspx");
 
