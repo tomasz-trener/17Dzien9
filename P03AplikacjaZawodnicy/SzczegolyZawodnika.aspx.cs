@@ -16,7 +16,7 @@ namespace P03AplikacjaZawodnicy
         {
             string idStr = Request["id"];
 
-            if (!string.IsNullOrEmpty(idStr))
+            if (!string.IsNullOrEmpty(idStr) && !Page.IsPostBack)
             {
                 int id = Convert.ToInt32(idStr);
 
@@ -30,6 +30,7 @@ namespace P03AplikacjaZawodnicy
                 txtWaga.Text = Convert.ToString(Zaznaczony.Waga);
                 txtWzrost.Text = Convert.ToString(Zaznaczony.Wzrost);
                 txtDataUr.Text = Zaznaczony.DataSformatowana;
+                txtIdTrenera.Text = Convert.ToString(Zaznaczony.Id_trenera);
             }
         }
 
@@ -45,7 +46,14 @@ namespace P03AplikacjaZawodnicy
             zawodnik.Waga = Convert.ToInt32(txtWaga.Text);
             zawodnik.Wzrost = Convert.ToInt32(txtWzrost.Text);
 
+            zawodnik.Id_zawodnika = Convert.ToInt32(txtIdZawodnika.Text);
+            zawodnik.Id_trenera = Convert.ToInt32(txtIdTrenera.Text);
+          //  zawodnik.Id_trenera = Zaznaczony.Id_trenera;
+          //  zawodnik.Id_zawodnika = Zaznaczony.Id_zawodnika;
+            
             zr.Edytuj(zawodnik);
+
+            Response.Redirect("Default.aspx");
 
         }
     }

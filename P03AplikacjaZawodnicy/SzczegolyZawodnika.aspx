@@ -186,6 +186,7 @@
                       <div class="form-group">
                         <label>ID</label>
                         <asp:TextBox ID="txtIdZawodnika" Enabled="false" CssClass="form-control" runat="server"></asp:TextBox>
+                         <asp:TextBox ID="txtIdTrenera" Visible="false" runat="server"></asp:TextBox>
                        <%-- <input type="text" id="btnIdZawodnika" class="form-control" disabled=""  value="<%= Zaznaczony.Id_zawodnika %>">--%>
                       </div>
                     </div>
