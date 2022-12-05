@@ -45,22 +45,25 @@ namespace P02AplikacjaZawodnicy.Repositories
 
             Zawodnik[] wynik = new Zawodnik[zawodnicy.Length];
             for (int i = 0; i < zawodnicy.Length; i++)
-            {
-                wynik[i] = new Zawodnik()
-                {
-                    Id_zawodnika = zawodnicy[i].id_zawodnika,
-                    Id_trenera = zawodnicy[i].id_trenera,
-                    Imie = zawodnicy[i].imie,
-                    Nazwisko = zawodnicy[i].nazwisko,
-                    Kraj = zawodnicy[i].kraj,
-                    Wzrost = zawodnicy[i].wzrost,
-                    Waga = zawodnicy[i].waga,
-                    DataUrodzenia = zawodnicy[i].data_ur
-                };
-            }
+                wynik[i] = Transformuj(zawodnicy[i]);
+            
             zr.Zawodnicy = wynik;
             return zr;
         }
+
+        private Zawodnik Transformuj(ZawodnikDB zawodnikDb) =>
+             new Zawodnik()
+            {
+                Id_zawodnika = zawodnikDb.id_zawodnika,
+                Id_trenera = zawodnikDb.id_trenera,
+                Imie = zawodnikDb.imie,
+                Nazwisko = zawodnikDb.nazwisko,
+                Kraj = zawodnikDb.kraj,
+                Wzrost = zawodnikDb.wzrost,
+                Waga = zawodnikDb.waga,
+                DataUrodzenia = zawodnikDb.data_ur
+            };
+        
 
         public void Edytuj(Zawodnik z)
         {
@@ -105,6 +108,11 @@ namespace P02AplikacjaZawodnicy.Repositories
             db.SubmitChanges();
         }
 
+        public Zawodnik PodajZawodnika(int id)
+        {
+            ModelBazyDataContext db = new ModelBazyDataContext();
+            ZawodnikDB zdb= db.ZawodnikDB.FirstOrDefault(x => x.id_zawodnika == id);
+        }
          
     }
 }

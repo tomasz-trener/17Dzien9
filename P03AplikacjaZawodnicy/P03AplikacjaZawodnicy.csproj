@@ -90,6 +90,11 @@
     <Content Include="assets\js\plugins\chartjs.min.js" />
     <Content Include="assets\js\plugins\perfect-scrollbar.jquery.min.js" />
     <Content Include="Default.aspx" />
+    <Content Include="Images\fin.jpg" />
+    <Content Include="Images\ger.jpg" />
+    <Content Include="Images\pol.jpg" />
+    <Content Include="Images\usa.jpg" />
+    <Content Include="SzczegolyZawodnika.aspx" />
     <Content Include="Web.config" />
   </ItemGroup>
   <ItemGroup>
@@ -110,6 +115,13 @@
       <DependentUpon>ModelBazy.dbml</DependentUpon>
     </Compile>
     <Compile Include="Repositories\ZawodnicyRepository.cs" />
+    <Compile Include="SzczegolyZawodnika.aspx.cs">
+      <DependentUpon>SzczegolyZawodnika.aspx</DependentUpon>
+      <SubType>ASPXCodeBehind</SubType>
+    </Compile>
+    <Compile Include="SzczegolyZawodnika.aspx.designer.cs">
+      <DependentUpon>SzczegolyZawodnika.aspx</DependentUpon>
+    </Compile>
   </ItemGroup>
   <ItemGroup>
     <Content Include="assets\css\bootstrap.min.css.map" />
@@ -173,9 +185,7 @@
   <ItemGroup>
     <Service Include="{3259AA49-8AA1-44D3-9025-A0B520596A8C}" />
   </ItemGroup>
-  <ItemGroup>
-    <Folder Include="Images\" />
-  </ItemGroup>
+  <ItemGroup />
   <PropertyGroup>
     <VisualStudioVersion Condition="'$(VisualStudioVersion)' == ''">10.0</VisualStudioVersion>
     <VSToolsPath Condition="'$(VSToolsPath)' == ''">$(MSBuildExtensionsPath32)\Microsoft\VisualStudio\v$(VisualStudioVersion)</VSToolsPath>
