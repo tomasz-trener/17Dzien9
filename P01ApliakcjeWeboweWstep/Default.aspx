@@ -13,7 +13,7 @@
 
         <asp:TextBox ID="TextBox1" runat="server"></asp:TextBox>
 
-        <asp:ListBox ID="lbDane" runat="server"></asp:ListBox>
+        <asp:ListBox ID="lbDane" Height="300" runat="server"></asp:ListBox>
 
     </form>
 </body>

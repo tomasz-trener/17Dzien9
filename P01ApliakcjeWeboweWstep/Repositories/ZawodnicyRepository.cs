@@ -12,17 +12,19 @@ namespace P02AplikacjaZawodnicy.Repositories
 {
     internal class ZawodnicyRepository
     {
-        public ZawodnicyResult PodajZawodnikow(string filtr, int nrStrony, int wieloscStrony)
+        public ZawodnicyResult PodajZawodnikow(string filtr=null, int? nrStrony = null, int? wieloscStrony = null)
         {
             ZawodnicyResult zr = new ZawodnicyResult();
 
             ModelBazyDataContext db = new ModelBazyDataContext();
-            filtr = filtr.ToLower();
+           
             ZawodnikDB[] zawodnicy;
-            
+
             if (string.IsNullOrEmpty(filtr))
                 zawodnicy = db.ZawodnikDB.ToArray();
             else
+            {
+                filtr = filtr.ToLower();
                 zawodnicy = db.ZawodnikDB.ToArray().Where(x =>
                     x.imie.ToLower().Contains(filtr) ||
                     x.nazwisko.ToLower().Contains(filtr) ||
@@ -31,12 +33,14 @@ namespace P02AplikacjaZawodnicy.Repositories
                     x.waga.ToString().Contains(filtr) ||
                     x.wzrost.ToString().Contains(filtr)
                     ).ToArray();
+            }
             // w momencie musimy tę wartośc policzyc 
 
             int liczbaElementwow = zawodnicy.Length;
             zr.MaksymalnaLiczbaElementow = liczbaElementwow;
 
-            zawodnicy= zawodnicy.Skip(wieloscStrony * (nrStrony - 1)).Take(wieloscStrony).ToArray();
+            if(nrStrony != null && wieloscStrony != null)
+                zawodnicy= zawodnicy.Skip((int)wieloscStrony * ((int)nrStrony - 1)).Take((int)wieloscStrony).ToArray();
 
             Zawodnik[] wynik = new Zawodnik[zawodnicy.Length];
             for (int i = 0; i < zawodnicy.Length; i++)

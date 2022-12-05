@@ -21,8 +21,8 @@ namespace P01ApliakcjeWeboweWstep
             TextBox1.Text = "hej";
 
             ZawodnicyRepository zr = new ZawodnicyRepository();
-            ZawodnicyResult zawodnicy= zr.PodajZawodnikow("pol", 1, 5);
-
+            //ZawodnicyResult zawodnicy= zr.PodajZawodnikow(null, null, null);
+            ZawodnicyResult zawodnicy = zr.PodajZawodnikow();
             foreach (var z in zawodnicy.Zawodnicy)
             {
                 lbDane.Items.Add(z.ImieNazwisko);
